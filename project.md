@@ -35,7 +35,7 @@ You spawn in the boat, sees the child soul arriving, when the child soul gets at
 - Gestures
     + Row → with one oar to make the boat move
     + Pick up and drop → the obole to make the soul get in the boat
-    + Push away → keep souls away 
+    + Push away → keep souls away
     + Bye sign → to make the soul leave
 
 - Sounds
@@ -47,14 +47,45 @@ You spawn in the boat, sees the child soul arriving, when the child soul gets at
 
 ## State Machines
 **Game Manager :**
-- Embark
-- Row
-- Defend
-- Release
+	- WaitingForTheSoul
+	→ Obole is available
+- PickingUpObole
+→ Obole is dropped in the boat
+- SoulEmbark
+→ Soul is at its place in the boat
+- FirstRowing
+→ Enter the attack zone
+- AttackedBySouls
+→ Enough souls have been defeated
+- SecondRowing
+→ Arrived at dock zone
+- SoulLeaveBoat
+→ Soul arrive at the dock and look at you
+- Goodbye
+→ You make a goodbye sign
+- SoulRelease
 
 **Child soul :**
 - Arrive
+- GivingObole
 - Idle
+- Fear
+- Leave
+- Released
+
+**Water :**
+- Calm
+- Raging
+
+**Angry soul :**
+- Arrive
+- Attack
+- Leave
+
+**Oar :**
+- Grabbed
+- Idle
+
 - Fear
 - Cry
 - Leave
