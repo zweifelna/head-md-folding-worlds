@@ -47,8 +47,8 @@ You spawn in the boat, sees the child soul arriving, when the child soul gets at
 
 ## State Machines
 **Game Manager :**
-	- WaitingForTheSoul
-	→ Obole is available
+- WaitingForTheSoul
+→ Obole is available
 - PickingUpObole
 → Obole is dropped in the boat
 - SoulEmbark

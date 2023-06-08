@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Psychopomp/Assets/Scenes/BoatTest/Boat/baked_mesh_tex0.png.meta
 guid: d5f99f00569cb3f40bf5d77727221569
+=======
+guid: a5bb31780c81542eaa26d71284b7f8d8
+>>>>>>> a64e486ca5e3cf6e08c1b7a7b8156e9756ef55c5:Psychopomp/Assets/Materials/Boat/baked_mesh_tex0.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Psychopomp/Assets/Scenes/BoatTest/Boat/clean_boat.fbx.meta
 guid: e274d71b14a5be14d83d714d0902bf1a
+=======
+guid: 54aa0ca295166460e9fc722cc1db6247
+>>>>>>> a64e486ca5e3cf6e08c1b7a7b8156e9756ef55c5:Psychopomp/Assets/Scenes/BoatTest/Boat/glassStatue.obj.meta
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
