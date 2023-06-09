@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.github.prossel.unity-fps-counter": {
+      "version": "https://github.com/prossel/Unity-FPS-counter.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "14af455819217ed1f88999718205baf240e3e880"
+    },
     "com.unity.burst": {
       "version": "1.8.4",
       "depth": 1,
