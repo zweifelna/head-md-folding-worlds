@@ -8,6 +8,8 @@ public class TargetController : MonoBehaviour
     [SerializeField] bool isGap = false;
     [SerializeField] GameObject UnitPrefab;
     [SerializeField] float zOffset = 30.5f;
+    [SerializeField] Transform spawnPosition;
+    [SerializeField] GameObject soulPrefab;
     public int id;
     List<GameObject> nextTargets = new List<GameObject>();
 
@@ -44,6 +46,7 @@ public class TargetController : MonoBehaviour
             {
                 // Set boat to is waiting
                 BoatController.Instance.setIsWaiting(true);
+                Instantiate(soulPrefab, spawnPosition.position, Quaternion.identity);
             }
         }
     }

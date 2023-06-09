@@ -5,6 +5,13 @@ using UnityEngine;
 public class SoulController : MonoBehaviour
 {
     [SerializeField] float duration;
+    Transform targetPosition;
+
+    void Start()
+    {
+        targetPosition = GameObject.FindGameObjectWithTag("SoulPosition").transform;
+        moveFromTo(transform, targetPosition, duration);
+    }
 
     public void moveFromTo(Transform pointA, Transform pointB, float duration)
     {
@@ -21,6 +28,15 @@ public class SoulController : MonoBehaviour
         {
             Vector3 newPosition = Vector3.Lerp(start, end, (elapsedTime / time));
             newPosition.y = transform.position.y;
+
+            // Calculate the direction vector and set the rotation
+            Vector3 direction = (newPosition - transform.position).normalized;
+            if (direction != Vector3.zero) // Check for zero direction vector
+            {
+                Quaternion toRotation = Quaternion.LookRotation(direction, Vector3.up);
+                transform.rotation = toRotation;
+            }
+
             transform.position = newPosition;
             elapsedTime += Time.deltaTime;
             yield return null;
