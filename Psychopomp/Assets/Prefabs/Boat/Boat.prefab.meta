@@ -1,13 +1,7 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Psychopomp/Assets/Materials/Water/Materials/water1_80%.mat.meta
-guid: 6c79cba35bcf448c79f9d1646d3cfec1
-NativeFormatImporter:
-========
-guid: 7d5bdc7f754249d4f91b4848d89de2ac
+guid: 6e5228d69ea01614384224c40ef3ac14
 PrefabImporter:
->>>>>>>> b05d244fa60b8c3655a3758b33685b111d7938f1:Psychopomp/Assets/Prefabs/Boat/Boat.prefab.meta
   externalObjects: {}
-  mainObjectFileID: 2100000
   userData: 
   assetBundleName: 
   assetBundleVariant: 

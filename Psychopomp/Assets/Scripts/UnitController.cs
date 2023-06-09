@@ -21,6 +21,14 @@ public class UnitController : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        // Find gameobjects with tag Unit
+        GameObject unit = GameObject.FindGameObjectWithTag("Unit");
+        units.Add(unit);
+        unitToDestroy = unit;
+    }
+
     void Update()
     {
         if (units.Count == 4)

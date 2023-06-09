@@ -13,10 +13,10 @@ public class BoatController : MonoBehaviour
     [SerializeField] TextMeshProUGUI text;
     [SerializeField] bool debug = false;
 
-    private Vector3 previousHandPosition;
+    Vector3 previousHandPosition;
     public bool isInWater = false;
 
-    private void Awake()
+    void Awake()
     {
         if (Instance != null && Instance != this)
         {
