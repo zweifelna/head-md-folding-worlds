@@ -12,9 +12,11 @@ public class BoatController : MonoBehaviour
     [SerializeField] List<GameObject> targets = new List<GameObject>();
     [SerializeField] TextMeshProUGUI text;
     [SerializeField] bool debug = false;
+    [SerializeField] bool isWaiting = false;
 
     Vector3 previousHandPosition;
     public bool isInWater = false;
+
 
     void Awake()
     {
@@ -30,12 +32,34 @@ public class BoatController : MonoBehaviour
 
     void Update()
     {
+        // Debug
+        text.text = isInWater ? "In Water" : "Out of Water";
+    }
+
+    public void rowingUpdate()
+    {
         GameObject target = targets.Find(x => x != null);
         if (target == null) return;
         handleMovement(target);
+    }
 
-        // Debug
-        text.text = isInWater ? "In Water" : "Out of Water";
+    public void faceFront()
+    {
+        StartCoroutine(ResetRotation());
+    }
+
+    IEnumerator ResetRotation()
+    {
+        Quaternion startRotation = transform.rotation;
+        Quaternion targetRotation = Quaternion.Euler(0, 0, 0);
+        float t = 0;
+
+        while (t < 1)
+        {
+            t += Time.deltaTime;
+            transform.rotation = Quaternion.Lerp(startRotation, targetRotation, t);
+            yield return null;
+        }
     }
 
     void handleMovement(GameObject target)
@@ -79,5 +103,15 @@ public class BoatController : MonoBehaviour
     public void addTarget(GameObject target)
     {
         targets.Add(target);
+    }
+
+    public bool getIsWaiting()
+    {
+        return isWaiting;
+    }
+
+    public void setIsWaiting(bool value)
+    {
+        isWaiting = value;
     }
 }

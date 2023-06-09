@@ -40,6 +40,11 @@ public class TargetController : MonoBehaviour
                     BoatController.Instance.addTarget(target);
                 }
             }
+            else
+            {
+                // Set boat to is waiting
+                BoatController.Instance.setIsWaiting(true);
+            }
         }
     }
 
