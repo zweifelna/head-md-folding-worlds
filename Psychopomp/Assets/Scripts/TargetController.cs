@@ -45,7 +45,7 @@ public class TargetController : MonoBehaviour
             else
             {
                 // Set boat to is waiting
-                BoatController.Instance.setIsWaiting(true);
+                // BoatController.Instance.setIsWaiting(true);
                 Instantiate(soulPrefab, spawnPosition.position, Quaternion.identity);
             }
         }
