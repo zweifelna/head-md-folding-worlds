@@ -385,6 +385,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 958878310903763423, guid: e2b8f8c95b52a0647b41890c3ef67295,
+        type: 3}
+      propertyPath: m_TagString
+      value: EndPosition
+      objectReference: {fileID: 0}
     - target: {fileID: 2792311100592620072, guid: e2b8f8c95b52a0647b41890c3ef67295,
         type: 3}
       propertyPath: m_Name
@@ -523,7 +528,7 @@ PrefabInstance:
     - target: {fileID: 5960861797182998142, guid: 6e5228d69ea01614384224c40ef3ac14,
         type: 3}
       propertyPath: debug
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5960861797182998142, guid: 6e5228d69ea01614384224c40ef3ac14,
         type: 3}
@@ -545,5 +550,15 @@ PrefabInstance:
       propertyPath: targets.Array.data[2]
       value: 
       objectReference: {fileID: 883236059}
+    - target: {fileID: 7480717400129072424, guid: 6e5228d69ea01614384224c40ef3ac14,
+        type: 3}
+      propertyPath: m_Name
+      value: SoulAnchor
+      objectReference: {fileID: 0}
+    - target: {fileID: 7480717400129072424, guid: 6e5228d69ea01614384224c40ef3ac14,
+        type: 3}
+      propertyPath: m_TagString
+      value: SoulAnchor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e5228d69ea01614384224c40ef3ac14, type: 3}
