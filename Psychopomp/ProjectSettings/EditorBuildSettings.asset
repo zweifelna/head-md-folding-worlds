@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/BoatTests.unity
+    path: Assets/Scenes/Psychopomp.unity
     guid: 61f834d1de5011c498bab701a2de3d22
   - enabled: 0
     path: Assets/Scenes/Playground.unity
