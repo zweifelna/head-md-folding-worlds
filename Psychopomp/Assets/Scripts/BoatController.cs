@@ -17,6 +17,9 @@ public class BoatController : MonoBehaviour
     Vector3 previousHandPosition;
     public bool isInWater = false;
 
+    public float rowSpeed = 0.0f;
+    Vector3 rowDirection = Vector3.forward;
+    Vector3 directionToTarget;
 
     void Awake()
     {
@@ -34,6 +37,8 @@ public class BoatController : MonoBehaviour
     {
         // Debug
         text.text = isInWater ? "In Water" : "Out of Water";
+
+        if (isWaiting) rowSpeed = 0.0f;
     }
 
     public void rowingUpdate()
@@ -67,20 +72,31 @@ public class BoatController : MonoBehaviour
         // Calculate the pulling force
         Vector3 pullDirection = oarCollider.transform.position - previousHandPosition;
         float pullForce = pullDirection.magnitude / Time.deltaTime * .01f;
+        int forceMultiplier = 1;
 
         if (isInWater && pullDirection.z < 0)
         {
             // Calculate the direction to the target
-            Vector3 directionToTarget = (target.transform.position - transform.position);
+            directionToTarget = (target.transform.position - transform.position);
             directionToTarget.y = 0;
             directionToTarget = directionToTarget.normalized;
 
             // Move the boat towards the target
-            transform.position += directionToTarget * pullForce;
+            //transform.position += directionToTarget * pullForce; // douglas == bull in a china shop
+
+            rowSpeed += pullForce * forceMultiplier;
 
             // Rotate the boat to face the target
             Quaternion rotationToTarget = Quaternion.LookRotation(directionToTarget);
             transform.rotation = Quaternion.Slerp(transform.rotation, rotationToTarget, Time.deltaTime * 2.0f); // The number 2.0f represents the speed of rotation
+        }
+
+        transform.position += directionToTarget * rowSpeed * Time.deltaTime;
+
+        rowSpeed *= 0.99f;
+        if (rowSpeed < 0.01f)
+        {
+            rowSpeed = 0.0f;
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && debug)
