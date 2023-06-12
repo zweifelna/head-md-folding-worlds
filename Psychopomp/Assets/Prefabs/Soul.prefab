@@ -111,6 +111,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 724ca1dc6b026f04581c807c6dc19336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endPosition: {fileID: 0}
+  obolePrefab: {fileID: 996338067367032064, guid: e928edc2efbd4cd4da8d9103cfc60f49,
+    type: 3}
 --- !u!1 &1182494843054384421
 GameObject:
   m_ObjectHideFlags: 0

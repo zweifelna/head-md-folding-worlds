@@ -15,6 +15,8 @@ public class SoulController : MonoBehaviour
     bool isOnBoat = false;
     bool mustLeave = false;
 
+    [SerializeField] GameObject obolePrefab;
+
 
     IEnumerator toggleIsOnBoatCoroutine(bool value)
     {
@@ -25,7 +27,9 @@ public class SoulController : MonoBehaviour
     IEnumerator dropOboleCoroutine()
     {
         yield return new WaitForSeconds(2f);
-        Debug.Log("Dropping obole");
+
+        // Drop obole with a random rotation;
+        GameObject obole = Instantiate(obolePrefab, transform.position, Random.rotation);
     }
 
     IEnumerator appearCoroutine()

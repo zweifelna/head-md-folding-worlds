@@ -10,6 +10,8 @@ TagManager:
   - SoulAnchor
   - Soul
   - EndPosition
+  - SoulPosition
+  - OboleContainer
   layers:
   - Default
   - TransparentFX
@@ -17,7 +19,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Obole
   - 
   - 
   - 
