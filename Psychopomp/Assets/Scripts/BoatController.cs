@@ -90,7 +90,7 @@ public class BoatController : MonoBehaviour
             directionToTarget = directionToTarget.normalized;
 
             // Move the boat towards the target
-            transform.position += directionToTarget * .5f;
+            transform.position += directionToTarget * 2f;
 
             // Rotate the boat to face the target
             Quaternion rotationToTarget = Quaternion.LookRotation(directionToTarget);

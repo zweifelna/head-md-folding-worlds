@@ -7,7 +7,9 @@ TagManager:
   - Boat
   - Target
   - Unit
-  - SoulPosition
+  - SoulAnchor
+  - Soul
+  - EndPosition
   layers:
   - Default
   - TransparentFX
