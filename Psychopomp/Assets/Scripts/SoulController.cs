@@ -9,6 +9,7 @@ public class SoulController : MonoBehaviour
         BoatController.Instance.setIsWaiting(false);
     }
 
+    public bool isActive = false;
     Transform lookAtTarget;
     public Transform endPosition;
     bool hasAppeared = false;

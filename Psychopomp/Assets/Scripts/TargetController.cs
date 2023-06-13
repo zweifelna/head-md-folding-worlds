@@ -21,6 +21,14 @@ public class TargetController : MonoBehaviour
     public int id;
     List<GameObject> nextTargets = new List<GameObject>();
 
+    void Start()
+    {
+        if (targetType == TargetType.Gap)
+        {
+            Instantiate(soulPrefab, spawnPosition.position, Quaternion.identity);
+        }
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Boat")
@@ -44,6 +52,10 @@ public class TargetController : MonoBehaviour
     }
     void handleGapEnter()
     {
+        // Find soul
+        GameObject soul = GameObject.FindGameObjectWithTag("Soul");
+        soul.GetComponent<SoulController>().isActive = true;
+
         // Get parent component that have the tag Unit
         GameObject Unit = transform.parent.gameObject.transform.parent.gameObject;
 
@@ -71,7 +83,6 @@ public class TargetController : MonoBehaviour
         LightController.Instance.setLightToHandle(spotLight);
         LightController.Instance.turnOn();
         BoatController.Instance.setIsWaiting(true);
-        Instantiate(soulPrefab, spawnPosition.position, Quaternion.identity);
     }
 
     void handleEndEnter()
