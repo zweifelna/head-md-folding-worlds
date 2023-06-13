@@ -12,12 +12,17 @@ public class SoulController : MonoBehaviour
     public bool isActive = false;
     Transform lookAtTarget;
     public Transform endPosition;
+    Transform soulAnchor;
     bool hasAppeared = false;
     bool isOnBoat = false;
     bool mustLeave = false;
 
     [SerializeField] GameObject obolePrefab;
 
+    void Update()
+    {
+        soulAnchor = getSoulAnchor();
+    }
 
     IEnumerator toggleIsOnBoatCoroutine(bool value)
     {
@@ -86,9 +91,11 @@ public class SoulController : MonoBehaviour
 
     IEnumerator fromStartToBoatCoroutine(float duration)
     {
+        yield return new WaitForSeconds(1f);
+
         float elapsedTime = 0f;
         Vector3 start = transform.position;
-        Vector3 end = getSoulAnchor().position;
+        Vector3 end = soulAnchor.position;
         end.y = transform.position.y;
 
         while (elapsedTime < duration)
@@ -97,12 +104,12 @@ public class SoulController : MonoBehaviour
             newPosition.y = transform.position.y;
 
             // Calculate the direction vector and set the rotation
-            Vector3 direction = (newPosition - transform.position).normalized;
-            if (direction != Vector3.zero) // Check for zero direction vector
-            {
-                Quaternion toRotation = Quaternion.LookRotation(direction, Vector3.up);
-                transform.rotation = toRotation;
-            }
+            // Vector3 direction = (newPosition - transform.position).normalized;
+            // if (direction != Vector3.zero) // Check for zero direction vector
+            // {
+            //     Quaternion toRotation = Quaternion.LookRotation(direction, Vector3.up);
+            //     transform.rotation = toRotation;
+            // }
 
             transform.position = newPosition;
             elapsedTime += Time.deltaTime;
