@@ -29,7 +29,7 @@ public class SoulController : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         // Drop obole with a random rotation;
-        GameObject obole = Instantiate(obolePrefab, transform.position, Random.rotation);
+        GameObject obole = Instantiate(obolePrefab, transform.position, Quaternion.identity);
     }
 
     IEnumerator appearCoroutine()
