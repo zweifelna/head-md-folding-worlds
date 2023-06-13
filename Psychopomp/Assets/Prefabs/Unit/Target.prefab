@@ -127,10 +127,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d4a185772782604088bc7dba5c93d2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spotLight: {fileID: 0}
   targetType: 0
   UnitPrefab: {fileID: 2792311100592620072, guid: e2b8f8c95b52a0647b41890c3ef67295,
     type: 3}
   zOffset: 64
   spawnPosition: {fileID: 0}
-  soulPrefab: {fileID: 0}
+  soulPrefab: {fileID: 1182494842514218325, guid: 40104075738df344ea685b073d0dc1ea,
+    type: 3}
   id: 0

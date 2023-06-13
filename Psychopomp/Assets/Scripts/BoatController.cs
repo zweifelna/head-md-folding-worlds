@@ -35,9 +35,6 @@ public class BoatController : MonoBehaviour
 
     void Update()
     {
-        // Debug
-        text.text = isInWater ? "In Water" : "Out of Water";
-
         if (isWaiting) rowSpeed = 0.0f;
     }
 
