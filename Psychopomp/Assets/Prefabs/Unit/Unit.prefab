@@ -2121,7 +2121,7 @@ PrefabInstance:
         type: 3}
       propertyPath: soulPrefab
       value: 
-      objectReference: {fileID: 1182494842514218325, guid: 40104075738df344ea685b073d0dc1ea,
+      objectReference: {fileID: 6930374421879991429, guid: d41e09fd1f9030c45a2a403b7de0ef0b,
         type: 3}
     - target: {fileID: 2246228163799399013, guid: 284a57fcdd67ffb4b9848dad95bc0230,
         type: 3}

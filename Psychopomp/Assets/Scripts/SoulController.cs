@@ -16,6 +16,7 @@ public class SoulController : MonoBehaviour
     bool hasAppeared = false;
     bool isOnBoat = false;
     bool mustLeave = false;
+    public bool mustEmbark = false;
 
     [SerializeField] GameObject obolePrefab;
 
@@ -91,8 +92,6 @@ public class SoulController : MonoBehaviour
 
     IEnumerator fromStartToBoatCoroutine(float duration)
     {
-        yield return new WaitForSeconds(1f);
-
         float elapsedTime = 0f;
         Vector3 start = transform.position;
         Vector3 end = soulAnchor.position;
@@ -224,5 +223,11 @@ public class SoulController : MonoBehaviour
     public void turnOffLights()
     {
         LightController.Instance.turnOff();
+    }
+
+    public void endStartDockAnimation()
+    {
+        GetComponent<Animator>().enabled = false;
+        mustEmbark = true;
     }
 }
