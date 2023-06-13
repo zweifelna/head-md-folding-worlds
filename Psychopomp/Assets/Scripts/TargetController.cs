@@ -12,6 +12,7 @@ public class TargetController : MonoBehaviour
         End
     }
 
+    [SerializeField] Light spotLight;
     [SerializeField] TargetType targetType;
     [SerializeField] GameObject UnitPrefab;
     [SerializeField] float zOffset = 30.5f;
@@ -24,7 +25,6 @@ public class TargetController : MonoBehaviour
     {
         if (other.gameObject.tag == "Boat")
         {
-            Destroy(gameObject);
 
             switch (targetType)
             {
@@ -38,9 +38,10 @@ public class TargetController : MonoBehaviour
                     handleEndEnter();
                     break;
             }
+
+            Destroy(gameObject);
         }
     }
-
     void handleGapEnter()
     {
         // Get parent component that have the tag Unit
@@ -67,12 +68,17 @@ public class TargetController : MonoBehaviour
 
     void handleStartEnter()
     {
+        LightController.Instance.setLightToHandle(spotLight);
+        LightController.Instance.turnOn();
         BoatController.Instance.setIsWaiting(true);
         Instantiate(soulPrefab, spawnPosition.position, Quaternion.identity);
     }
 
     void handleEndEnter()
     {
+        LightController.Instance.setLightToHandle(spotLight);
+        LightController.Instance.turnOn();
+
         // Make the Boat wait
         BoatController.Instance.setIsWaiting(true);
 

@@ -130,7 +130,7 @@ MonoBehaviour:
   targetType: 0
   UnitPrefab: {fileID: 2792311100592620072, guid: e2b8f8c95b52a0647b41890c3ef67295,
     type: 3}
-  zOffset: 65
+  zOffset: 64
   spawnPosition: {fileID: 0}
   soulPrefab: {fileID: 0}
   id: 0

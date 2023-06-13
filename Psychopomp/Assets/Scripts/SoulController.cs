@@ -212,4 +212,9 @@ public class SoulController : MonoBehaviour
     {
         endPosition = position;
     }
+
+    public void turnOffLights()
+    {
+        LightController.Instance.turnOff();
+    }
 }
