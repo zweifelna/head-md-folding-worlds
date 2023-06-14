@@ -168,6 +168,38 @@ MonoBehaviour:
     loop: 0
     playRandomly: 1
     source: {fileID: 0}
+  - name: anim1
+    clip: {fileID: 8300000, guid: 61f10f9184536407585f90117a7db679, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0.3
+    loop: 0
+    playRandomly: 0
+    source: {fileID: 0}
+  - name: anim2
+    clip: {fileID: 8300000, guid: df982c64b009b4c86aca58463096c696, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0.3
+    loop: 0
+    playRandomly: 0
+    source: {fileID: 0}
+  - name: anim3
+    clip: {fileID: 8300000, guid: e7378f1f587de41bc8203ffe12aa2220, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0.3
+    loop: 0
+    playRandomly: 0
+    source: {fileID: 0}
+  - name: anim4
+    clip: {fileID: 8300000, guid: 99d60f68341dc43bc9fa0ace292dcc9b, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0.3
+    loop: 0
+    playRandomly: 0
+    source: {fileID: 0}
   randomSounds: []
   minSoundInterval: 0.5
   maxSoundInterval: 5
