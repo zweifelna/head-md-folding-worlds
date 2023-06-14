@@ -6,7 +6,7 @@ public class SoulController : MonoBehaviour
 {
     private void OnDestroy()
     {
-        BoatController.Instance.setIsWaiting(false);
+        // BoatController.Instance.setIsWaiting(false);
     }
 
     public bool isActive = false;
@@ -16,6 +16,7 @@ public class SoulController : MonoBehaviour
     bool hasAppeared = false;
     bool isOnBoat = false;
     bool mustLeave = false;
+    public bool mustEmbark = false;
 
     [SerializeField] GameObject obolePrefab;
 
@@ -47,7 +48,7 @@ public class SoulController : MonoBehaviour
 
     IEnumerator disapearCoroutine()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0f);
         Destroy(gameObject);
     }
 
@@ -60,7 +61,7 @@ public class SoulController : MonoBehaviour
     public void lookAt(Transform target)
     {
         //Find the Pivot child gameobject
-        Transform pivot = transform.Find("Pivot");
+        Transform pivot = transform.Find("Floating").transform.Find("Pivot");
 
         // Calculate the direction vector from the current object's position to the target's position
         Vector3 direction = target.position - pivot.position;
@@ -91,8 +92,6 @@ public class SoulController : MonoBehaviour
 
     IEnumerator fromStartToBoatCoroutine(float duration)
     {
-        yield return new WaitForSeconds(1f);
-
         float elapsedTime = 0f;
         Vector3 start = transform.position;
         Vector3 end = soulAnchor.position;
@@ -138,7 +137,6 @@ public class SoulController : MonoBehaviour
         while (elapsedTime < duration)
         {
             Vector3 newPosition = Vector3.Lerp(start, end, (elapsedTime / duration));
-            newPosition.y = transform.position.y;
 
             // Calculate the direction vector and set the rotation
             Vector3 direction = (newPosition - transform.position).normalized;
@@ -154,9 +152,7 @@ public class SoulController : MonoBehaviour
         }
 
         // Ensure the movement is completed by setting the final position to the target
-        Vector3 finalPosition = end;
-        finalPosition.y = transform.position.y;
-        transform.position = finalPosition;
+        transform.position = end;
 
         // Toggle is on boat
         StartCoroutine(toggleIsOnBoatCoroutine(false));
@@ -164,7 +160,7 @@ public class SoulController : MonoBehaviour
 
     public void FromBoatToEnd()
     {
-        float duration = 2;
+        float duration = 8;
         StartCoroutine(fromBoatToEndCoroutine(duration));
     }
 
@@ -225,4 +221,61 @@ public class SoulController : MonoBehaviour
     {
         LightController.Instance.turnOff();
     }
+
+    public void endHandler()
+    {
+        StartCoroutine(turnOffLightsCoroutine());
+    }
+
+    IEnumerator turnOffLightsCoroutine()
+    {
+
+        yield return new WaitForSeconds(1f);
+        turnOffLights();
+        BoatController.Instance.setIsWaiting(false);
+    }
+
+    public void endStartDockAnimation()
+    {
+        GetComponent<Animator>().enabled = false;
+        mustEmbark = true;
+    }
+
+    public void startEndDockAnimation()
+    {
+        GetComponent<Animator>().enabled = true;
+        GetComponent<Animator>().SetBool("mustExit", true);
+    }
+
+    IEnumerator ResetPivotRotationCoroutine(float duration)
+    {
+        // Find the Pivot child gameobject
+        Transform pivot = transform.Find("Floating").transform.Find("Pivot");
+
+        // Get the initial rotation
+        Quaternion initialLocalRotation = pivot.localRotation;
+        Vector3 targetLocalEulerAngles = Vector3.zero;
+
+        float elapsedTime = 0f;
+        while (elapsedTime < duration)
+        {
+            // Use slerp to smoothly interpolate between the current local rotation and the target local rotation
+            float progress = elapsedTime / duration;
+            pivot.localRotation = Quaternion.Slerp(initialLocalRotation, Quaternion.Euler(targetLocalEulerAngles), progress);
+
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        // Ensure the rotation is completed by setting the final local rotation to the target
+        pivot.localRotation = Quaternion.Euler(targetLocalEulerAngles);
+    }
+
+    public void resetPivotRotation()
+    {
+        float duration = 1;
+        StartCoroutine(ResetPivotRotationCoroutine(duration));
+    }
+
+
 }
