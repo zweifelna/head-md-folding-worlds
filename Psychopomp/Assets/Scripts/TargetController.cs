@@ -108,8 +108,20 @@ public class TargetController : MonoBehaviour
         // Make the Boat wait
         BoatController.Instance.setIsWaiting(true);
 
-        // Find the active Soul
-        SoulController soul = GameObject.FindGameObjectWithTag("Soul").GetComponent<SoulController>();
+        // Find all souls
+        GameObject[] souls = GameObject.FindGameObjectsWithTag("Soul");
+        // Find the first soul that is active
+        SoulController soul = null;
+        foreach (GameObject s in souls)
+        {
+            if (s.GetComponent<SoulController>().isActive)
+            {
+                soul = s.GetComponent<SoulController>();
+                break;
+            }
+        }
+
+        Debug.Log(soul);
 
         // Find EndPosition sibling
         Transform endPosition = transform.parent.Find("EndPosition");
