@@ -12,4 +12,9 @@ public class OboleController : MonoBehaviour
             FindObjectOfType<AudioManager>().play("Obole");
         }
     }
+
+    public void stopAnimator()
+    {
+        GetComponent<Animator>().enabled = false;
+    }
 }

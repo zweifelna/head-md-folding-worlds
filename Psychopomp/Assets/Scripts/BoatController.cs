@@ -113,6 +113,20 @@ public class BoatController : MonoBehaviour
         previousHandPosition = oarCollider.transform.position;
     }
 
+    // IEnumerator FadeOut(AudioSource audioSource, float fadeTime)
+    // {
+    //     float startVolume = audioSource.volume;
+
+    //     while (audioSource.volume > 0)
+    //     {
+    //         audioSource.volume -= startVolume * Time.deltaTime / fadeTime;
+    //         yield return null;
+    //     }
+
+    //     audioSource.Stop();
+    //     audioSource.volume = startVolume;
+    // }
+
     public void addTarget(GameObject target)
     {
         targets.Add(target);

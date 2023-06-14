@@ -533,6 +533,8 @@ MonoBehaviour:
   text: {fileID: 0}
   debug: 1
   isWaiting: 0
+  audioSource: {fileID: 8749051836140662695}
+  rowingSound: {fileID: 8300000, guid: 2139aa1243b79da42a5cff143b91ac07, type: 3}
   isInWater: 0
   rowSpeed: 0
 --- !u!65 &5960861797182998143
@@ -1158,6 +1160,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1122857800142641180, guid: 5eccbf4be2c00e94689ee8062e4e7276,
+        type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1294039596567067160, guid: 5eccbf4be2c00e94689ee8062e4e7276,
+        type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 1470082431350528778, guid: 5eccbf4be2c00e94689ee8062e4e7276,
         type: 3}
       propertyPath: m_ClearFlags
@@ -1257,6 +1269,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4752991478034876816, guid: 5eccbf4be2c00e94689ee8062e4e7276,
+        type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 0.007
+      objectReference: {fileID: 0}
+    - target: {fileID: 4752991478793134311, guid: 5eccbf4be2c00e94689ee8062e4e7276,
+        type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 0.007
       objectReference: {fileID: 0}
     - target: {fileID: 4763085288384086254, guid: 5eccbf4be2c00e94689ee8062e4e7276,
         type: 3}
@@ -1403,6 +1425,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Oar
       objectReference: {fileID: 0}
+    - target: {fileID: 3158110148711230600, guid: 87f820fba194ba34a8ae920d11c19e3b,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2139aa1243b79da42a5cff143b91ac07, type: 3}
     - target: {fileID: 4547220526349267523, guid: 87f820fba194ba34a8ae920d11c19e3b,
         type: 3}
       propertyPath: m_RootOrder
@@ -1468,6 +1495,12 @@ PrefabInstance:
 --- !u!1 &8176536222275966494 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2576578400940856625, guid: 87f820fba194ba34a8ae920d11c19e3b,
+    type: 3}
+  m_PrefabInstance: {fileID: 5960861797209178927}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &8749051836140662695 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3158110148711230600, guid: 87f820fba194ba34a8ae920d11c19e3b,
     type: 3}
   m_PrefabInstance: {fileID: 5960861797209178927}
   m_PrefabAsset: {fileID: 0}

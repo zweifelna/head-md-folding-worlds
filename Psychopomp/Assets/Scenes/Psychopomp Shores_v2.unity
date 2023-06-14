@@ -583,7 +583,7 @@ MonoBehaviour:
   sounds:
   - name: Wind
     clip: {fileID: 8300000, guid: 6296dda7628109147b400a7088528be8, type: 3}
-    volume: 0.75
+    volume: 0.3
     pitch: 1
     spatialBlend: 0
     loop: 1
@@ -591,7 +591,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: River
     clip: {fileID: 8300000, guid: 63933009420965c4d817c7e64498649a, type: 3}
-    volume: 0.4
+    volume: 0.2
     pitch: 1
     spatialBlend: 0
     loop: 1
@@ -783,6 +783,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: SoulAnchor
+      objectReference: {fileID: 0}
+    - target: {fileID: 8749051836140662695, guid: 6e5228d69ea01614384224c40ef3ac14,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e5228d69ea01614384224c40ef3ac14, type: 3}

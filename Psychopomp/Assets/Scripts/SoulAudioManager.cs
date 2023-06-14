@@ -8,7 +8,7 @@ public class SoulAudioManager : MonoBehaviour
 {
     public Sound[] sounds;
     public List<Sound> randomSounds = new List<Sound>();
-    private bool isRandomSoundPlaybackActive = false;
+    // private bool isRandomSoundPlaybackActive = false;
     private bool isPlayingRandomSound = false;
     List<Coroutine> randomSoundCoroutines = new List<Coroutine>();
     public float minSoundInterval = 1f; // Minimum time interval before playing the next sound
