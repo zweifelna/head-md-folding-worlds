@@ -599,7 +599,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Obole
     clip: {fileID: 8300000, guid: 4498c9fb97010a848bd97b102e58ee39, type: 3}
-    volume: 1
+    volume: 0.7
     pitch: 1
     spatialBlend: 0
     loop: 0

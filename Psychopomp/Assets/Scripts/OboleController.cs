@@ -9,7 +9,10 @@ public class OboleController : MonoBehaviour
         if (collision.gameObject.tag == "OboleContainer")
         {
             this.transform.parent = collision.gameObject.transform.parent;
-            FindObjectOfType<AudioManager>().play("Obole");
+
+            //Find audioManager
+            GameObject audioManager = GameObject.Find("AudioManager");
+            audioManager.GetComponent<AudioManager>().play("Obole");
         }
     }
 
