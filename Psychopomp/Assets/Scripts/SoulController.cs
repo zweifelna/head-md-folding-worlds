@@ -6,7 +6,7 @@ public class SoulController : MonoBehaviour
 {
     private void OnDestroy()
     {
-        BoatController.Instance.setIsWaiting(false);
+        // BoatController.Instance.setIsWaiting(false);
     }
 
     public bool isActive = false;
@@ -48,7 +48,7 @@ public class SoulController : MonoBehaviour
 
     IEnumerator disapearCoroutine()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0f);
         Destroy(gameObject);
     }
 
@@ -61,7 +61,7 @@ public class SoulController : MonoBehaviour
     public void lookAt(Transform target)
     {
         //Find the Pivot child gameobject
-        Transform pivot = transform.Find("Pivot");
+        Transform pivot = transform.Find("Floating").transform.Find("Pivot");
 
         // Calculate the direction vector from the current object's position to the target's position
         Vector3 direction = target.position - pivot.position;
@@ -160,7 +160,7 @@ public class SoulController : MonoBehaviour
 
     public void FromBoatToEnd()
     {
-        float duration = 2;
+        float duration = 8;
         StartCoroutine(fromBoatToEndCoroutine(duration));
     }
 
@@ -237,7 +237,7 @@ public class SoulController : MonoBehaviour
     IEnumerator ResetPivotRotationCoroutine(float duration)
     {
         // Find the Pivot child gameobject
-        Transform pivot = transform.Find("Pivot");
+        Transform pivot = transform.Find("Floating").transform.Find("Pivot");
 
         // Get the initial rotation
         Quaternion initialLocalRotation = pivot.localRotation;
