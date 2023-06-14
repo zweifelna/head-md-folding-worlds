@@ -120,33 +120,57 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: hmm_1
-    clip: {fileID: 8300000, guid: 181566576e2ef8d4fb6842d4f7c152ed, type: 3}
+  - name: random1
+    clip: {fileID: 8300000, guid: dd0205cf787e57944b41ad90d3920d7d, type: 3}
     volume: 1
     pitch: 1
-    spatialBlend: 0.8
+    spatialBlend: 1
     loop: 0
     playRandomly: 1
     source: {fileID: 0}
-  - name: hmm_2
-    clip: {fileID: 8300000, guid: ecca682d26b2e41429dc196ee4fc3852, type: 3}
+  - name: random2
+    clip: {fileID: 8300000, guid: 7685ad8623e93394a8b32040bacf0deb, type: 3}
     volume: 1
     pitch: 1
-    spatialBlend: 0.8
+    spatialBlend: 0
     loop: 0
     playRandomly: 1
     source: {fileID: 0}
-  - name: hmm_3
-    clip: {fileID: 8300000, guid: 537e12291ea808f4cafa3e17bb4b9f79, type: 3}
+  - name: random3
+    clip: {fileID: 8300000, guid: 9969c7d32a4a17c4dad25ba59535ea60, type: 3}
     volume: 1
     pitch: 1
-    spatialBlend: 0.8
+    spatialBlend: 1
+    loop: 0
+    playRandomly: 1
+    source: {fileID: 0}
+  - name: random4
+    clip: {fileID: 8300000, guid: f4156c8c1a80ef446bcf2763cb3b3c49, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 1
+    loop: 0
+    playRandomly: 1
+    source: {fileID: 0}
+  - name: random5
+    clip: {fileID: 8300000, guid: 0800246de82d4774b805cd6a1c71448d, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 1
+    loop: 0
+    playRandomly: 1
+    source: {fileID: 0}
+  - name: random6
+    clip: {fileID: 8300000, guid: f571ab0ec2836a74ba0c626d9bc3b490, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 1
     loop: 0
     playRandomly: 1
     source: {fileID: 0}
   randomSounds: []
-  minSoundInterval: 0
-  maxSoundInterval: 0
+  minSoundInterval: 0.5
+  maxSoundInterval: 5
 --- !u!82 &4270318595588000431
 AudioSource:
   m_ObjectHideFlags: 0
