@@ -883,7 +883,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2089678145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -901,13 +901,17 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 6296dda7628109147b400a7088528be8, type: 3}
     volume: 1
     pitch: 1
+    spatialBlend: 0
     loop: 1
+    playRandomly: 0
     source: {fileID: 0}
   - name: River
     clip: {fileID: 8300000, guid: 63933009420965c4d817c7e64498649a, type: 3}
     volume: 1
     pitch: 1
+    spatialBlend: 0
     loop: 1
+    playRandomly: 0
     source: {fileID: 0}
 --- !u!4 &2089678146
 Transform:
