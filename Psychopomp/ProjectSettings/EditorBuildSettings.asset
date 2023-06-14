@@ -5,6 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Psychopomp Shores.unity
+    guid: 9e292e24f8f451949921b3096c49858a
   - enabled: 0
     path: Assets/Scenes/Psychopomp.unity
     guid: 61f834d1de5011c498bab701a2de3d22
@@ -14,7 +17,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/BoatTests_FPS.unity
     guid: d0afa0a0132de4f73a8645773360ca47
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Psychopomp Shores_copy2.unity
     guid: b2f20c0bd82f04efda751942b5a2aaaa
   m_configObjects:
