@@ -20,6 +20,7 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         play("Wind");
+        play("River");
     }
 
     public void play(string name)
