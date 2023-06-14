@@ -53,8 +53,23 @@ public class TargetController : MonoBehaviour
     void handleGapEnter()
     {
         // Find soul
-        GameObject soul = GameObject.FindGameObjectWithTag("Soul");
+        // GameObject soul = GameObject.FindGameObjectWithTag("Soul");
+        // soul.GetComponent<SoulController>().isActive = true;
+
+        // Find all souls
+        GameObject[] souls = GameObject.FindGameObjectsWithTag("Soul");
+        // Find the first soul that is not active
+        GameObject soul = null;
+        foreach (GameObject s in souls)
+        {
+            if (!s.GetComponent<SoulController>().isActive)
+            {
+                soul = s;
+                break;
+            }
+        }
         soul.GetComponent<SoulController>().isActive = true;
+
 
         // Get parent component that have the tag Unit
         GameObject Unit = transform.parent.gameObject.transform.parent.gameObject;
