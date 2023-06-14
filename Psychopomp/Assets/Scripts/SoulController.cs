@@ -222,6 +222,19 @@ public class SoulController : MonoBehaviour
         LightController.Instance.turnOff();
     }
 
+    public void endHandler()
+    {
+        StartCoroutine(turnOffLightsCoroutine());
+    }
+
+    IEnumerator turnOffLightsCoroutine()
+    {
+
+        yield return new WaitForSeconds(1f);
+        turnOffLights();
+        BoatController.Instance.setIsWaiting(false);
+    }
+
     public void endStartDockAnimation()
     {
         GetComponent<Animator>().enabled = false;
@@ -263,4 +276,6 @@ public class SoulController : MonoBehaviour
         float duration = 1;
         StartCoroutine(ResetPivotRotationCoroutine(duration));
     }
+
+
 }
