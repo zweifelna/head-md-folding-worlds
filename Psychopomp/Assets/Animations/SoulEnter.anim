@@ -1052,29 +1052,29 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: 
-    data: 
+    functionName: play
+    data: anim1
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 3.1
-    functionName: 
-    data: 
+    functionName: play
+    data: anim2
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 6.5
-    functionName: 
-    data: 
+    functionName: play
+    data: anim3
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 10.25
-    functionName: 
-    data: 
+  - time: 10.266666
+    functionName: play
+    data: anim4
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
