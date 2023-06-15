@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Psychopomp Shores.unity
     guid: 9e292e24f8f451949921b3096c49858a
   - enabled: 0
@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Psychopomp Shores_copy2.unity
     guid: b2f20c0bd82f04efda751942b5a2aaaa
+  - enabled: 1
+    path: Assets/Scenes/Psychopomp Shores_v2.unity
+    guid: a09668972486f1449954722538082cc5
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: afd376de9fe483149a9aa6c307eec5da,
       type: 2}
