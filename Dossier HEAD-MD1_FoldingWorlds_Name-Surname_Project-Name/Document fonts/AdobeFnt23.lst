@@ -4,9 +4,9 @@
 %BeginFont
 Handler:DirectoryHandler
 FontType:Invalid
-OutlineFileName:/Users/amauryhamon/Desktop/CODE/head-md-folding-worlds/WorkFiles/INDD/template/Dossier HEAD-MD1_FoldingWorlds_Name-Surname_Project-Name/Document fonts/AdobeFnt23.lst
-FileLength:1160
-FileModTime:708527815
+OutlineFileName:/Users/nathan_zweifel/Library/CloudStorage/OneDrive-Personnel/HEAD/S2/FoldingWorlds/head-md-folding-worlds/Dossier HEAD-MD1_FoldingWorlds_Name-Surname_Project-Name/Document fonts/AdobeFnt23.lst
+FileLength:1443
+FileModTime:708541854
 %EndFont
 
 %BeginFont
@@ -22,12 +22,12 @@ WidthClass:5
 AngleClass:1
 FullName:Arial Italic
 WritingScript:Roman
-OutlineFileName:/Users/amauryhamon/Desktop/CODE/head-md-folding-worlds/WorkFiles/INDD/template/Dossier HEAD-MD1_FoldingWorlds_Name-Surname_Project-Name/Document fonts/Arial Italic.ttf
+OutlineFileName:/Users/nathan_zweifel/Library/CloudStorage/OneDrive-Personnel/HEAD/S2/FoldingWorlds/head-md-folding-worlds/Dossier HEAD-MD1_FoldingWorlds_Name-Surname_Project-Name/Document fonts/Arial Italic.ttf
 DataFormat:sfntData
 hasSVG:no
 VariableFontType:NonVariableFont
 FileLength:553284
-FileModTime:708527815
+FileModTime:708541854
 NameArray:0,Mac,4,Arial Italic
 NameArray:0,Win,1,Arial
 %EndFont
@@ -45,12 +45,12 @@ WidthClass:5
 AngleClass:0
 FullName:Arial
 WritingScript:Roman
-OutlineFileName:/Users/amauryhamon/Desktop/CODE/head-md-folding-worlds/WorkFiles/INDD/template/Dossier HEAD-MD1_FoldingWorlds_Name-Surname_Project-Name/Document fonts/Arial.ttf
+OutlineFileName:/Users/nathan_zweifel/Library/CloudStorage/OneDrive-Personnel/HEAD/S2/FoldingWorlds/head-md-folding-worlds/Dossier HEAD-MD1_FoldingWorlds_Name-Surname_Project-Name/Document fonts/Arial.ttf
 DataFormat:sfntData
 hasSVG:no
 VariableFontType:NonVariableFont
 FileLength:773236
-FileModTime:708527815
+FileModTime:708541854
 NameArray:0,Mac,4,Arial
 NameArray:0,Win,1,Arial
 %EndFont
