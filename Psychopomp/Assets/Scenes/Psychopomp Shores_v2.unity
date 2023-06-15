@@ -600,7 +600,7 @@ MonoBehaviour:
   - name: Obole
     clip: {fileID: 8300000, guid: 4498c9fb97010a848bd97b102e58ee39, type: 3}
     volume: 0.7
-    pitch: 1
+    pitch: 0.5
     spatialBlend: 0
     loop: 0
     playRandomly: 0
@@ -743,6 +743,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1789269659667538208, guid: 6e5228d69ea01614384224c40ef3ac14,
+        type: 3}
+      propertyPath: m_Pitch
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2693933177053234741, guid: 6e5228d69ea01614384224c40ef3ac14,
         type: 3}
       propertyPath: m_Intensity

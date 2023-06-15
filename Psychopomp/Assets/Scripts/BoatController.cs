@@ -21,6 +21,8 @@ public class BoatController : MonoBehaviour
     Vector3 rowDirection = Vector3.forward;
     Vector3 directionToTarget;
 
+    AudioSource audioSource;
+
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -31,11 +33,25 @@ public class BoatController : MonoBehaviour
         {
             Instance = this;
         }
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
     {
-        if (isWaiting) rowSpeed = 0.0f;
+        if (isWaiting)
+        {
+            // lerp rowSpeed to 0 in 1 second
+            rowSpeed = Mathf.Lerp(rowSpeed, 0, Time.deltaTime);
+        }
+        // Debug.Log(audioSource.volume);
+
+        if (rowSpeed < 0.01f)
+        {
+            rowSpeed = 0.0f;
+            audioSource.volume = 0.0f;
+        }
+        audioSource.volume = Mathf.Clamp01(rowSpeed / 3f);
     }
 
     public void rowingUpdate()
@@ -91,10 +107,6 @@ public class BoatController : MonoBehaviour
         transform.position += directionToTarget * rowSpeed * Time.deltaTime;
 
         rowSpeed *= 0.99f;
-        if (rowSpeed < 0.01f)
-        {
-            rowSpeed = 0.0f;
-        }
 
         if (Input.GetKeyDown(KeyCode.Space) && debug)
         {
