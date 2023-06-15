@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.028916214, g: 0.029919984, b: 0.029905088, a: 1}
+  m_IndirectSpecularColor: {r: 0.028990248, g: 0.030007254, b: 0.03001278, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -214,7 +214,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &359597668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -583,7 +583,7 @@ MonoBehaviour:
   sounds:
   - name: Wind
     clip: {fileID: 8300000, guid: 6296dda7628109147b400a7088528be8, type: 3}
-    volume: 0.3
+    volume: 0.4
     pitch: 1
     spatialBlend: 0
     loop: 1

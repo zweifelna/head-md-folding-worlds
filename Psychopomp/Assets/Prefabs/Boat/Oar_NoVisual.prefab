@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4547220526349267523}
   m_Layer: 0
-  m_Name: Oar
+  m_Name: Oar_NoVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
