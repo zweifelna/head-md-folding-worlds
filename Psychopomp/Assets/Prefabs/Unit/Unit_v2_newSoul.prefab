@@ -1473,7 +1473,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2792311100592620075}
   m_Layer: 0
-  m_Name: Unit_v2
+  m_Name: Unit_v2_newSoul
   m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11407,13 +11407,13 @@ PrefabInstance:
         type: 3}
       propertyPath: UnitPrefab
       value: 
-      objectReference: {fileID: 2792311100592620072, guid: 8505a1b67a3c55e4188b986c81d7cbd4,
+      objectReference: {fileID: 2792311100592620072, guid: a051140850a71e6409f0ad336232a6ab,
         type: 3}
     - target: {fileID: 2246228163799399013, guid: 284a57fcdd67ffb4b9848dad95bc0230,
         type: 3}
       propertyPath: soulPrefab
       value: 
-      objectReference: {fileID: 6930374421879991429, guid: d41e09fd1f9030c45a2a403b7de0ef0b,
+      objectReference: {fileID: 6930374421879991429, guid: 10876ffa4a26204498ceb57a6b099b90,
         type: 3}
     - target: {fileID: 2246228163799399013, guid: 284a57fcdd67ffb4b9848dad95bc0230,
         type: 3}
@@ -11864,13 +11864,13 @@ PrefabInstance:
         type: 3}
       propertyPath: UnitPrefab
       value: 
-      objectReference: {fileID: 2792311100592620072, guid: 8505a1b67a3c55e4188b986c81d7cbd4,
+      objectReference: {fileID: 2792311100592620072, guid: a051140850a71e6409f0ad336232a6ab,
         type: 3}
     - target: {fileID: 2246228163799399013, guid: 284a57fcdd67ffb4b9848dad95bc0230,
         type: 3}
       propertyPath: soulPrefab
       value: 
-      objectReference: {fileID: 6930374421879991429, guid: d41e09fd1f9030c45a2a403b7de0ef0b,
+      objectReference: {fileID: 6930374421879991429, guid: 10876ffa4a26204498ceb57a6b099b90,
         type: 3}
     - target: {fileID: 2246228163799399013, guid: 284a57fcdd67ffb4b9848dad95bc0230,
         type: 3}
@@ -14281,13 +14281,13 @@ PrefabInstance:
         type: 3}
       propertyPath: UnitPrefab
       value: 
-      objectReference: {fileID: 2792311100592620072, guid: 8505a1b67a3c55e4188b986c81d7cbd4,
+      objectReference: {fileID: 2792311100592620072, guid: a051140850a71e6409f0ad336232a6ab,
         type: 3}
     - target: {fileID: 2246228163799399013, guid: 284a57fcdd67ffb4b9848dad95bc0230,
         type: 3}
       propertyPath: soulPrefab
       value: 
-      objectReference: {fileID: 6930374421879991429, guid: d41e09fd1f9030c45a2a403b7de0ef0b,
+      objectReference: {fileID: 6930374421879991429, guid: 10876ffa4a26204498ceb57a6b099b90,
         type: 3}
     - target: {fileID: 2246228163799399013, guid: 284a57fcdd67ffb4b9848dad95bc0230,
         type: 3}
