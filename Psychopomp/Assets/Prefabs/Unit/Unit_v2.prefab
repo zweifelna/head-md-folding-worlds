@@ -306,7 +306,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 958878310903763423}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1261,7 +1261,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2257834009542591315}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -11434,6 +11434,11 @@ PrefabInstance:
       propertyPath: m_Size.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7833956044816753929, guid: 284a57fcdd67ffb4b9848dad95bc0230,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 284a57fcdd67ffb4b9848dad95bc0230, type: 3}
 --- !u!4 &2015531928663597266 stripped
@@ -11864,6 +11869,11 @@ PrefabInstance:
       propertyPath: spawnPosition
       value: 
       objectReference: {fileID: 5641868633604182238}
+    - target: {fileID: 7833956044816753929, guid: 284a57fcdd67ffb4b9848dad95bc0230,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 284a57fcdd67ffb4b9848dad95bc0230, type: 3}
 --- !u!4 &2507891676984896530 stripped
@@ -14283,6 +14293,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7833956044816753929, guid: 284a57fcdd67ffb4b9848dad95bc0230,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 284a57fcdd67ffb4b9848dad95bc0230, type: 3}
