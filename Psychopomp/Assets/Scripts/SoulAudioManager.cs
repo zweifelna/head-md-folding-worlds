@@ -87,4 +87,22 @@ public class SoulAudioManager : MonoBehaviour
         }
         s.source.Play();
     }
+
+    public void playSad()
+    {
+        StartCoroutine(playSadCoroutine());
+    }
+
+    IEnumerator playSadCoroutine()
+    {
+        yield return new WaitForSeconds(1.5f);
+
+        //Stop all audioSource
+        foreach (Sound s in sounds)
+        {
+            s.source.Stop();
+        }
+
+        play("Sad");
+    }
 }

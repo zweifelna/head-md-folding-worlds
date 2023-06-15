@@ -200,6 +200,14 @@ MonoBehaviour:
     loop: 0
     playRandomly: 0
     source: {fileID: 0}
+  - name: Sad
+    clip: {fileID: 8300000, guid: f6d5aa7062943f147b59c25a3d0d04e9, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0.8
+    loop: 0
+    playRandomly: 0
+    source: {fileID: 0}
   randomSounds: []
   minSoundInterval: 0.5
   maxSoundInterval: 5
