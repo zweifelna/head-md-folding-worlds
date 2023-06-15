@@ -858,6 +858,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoulContainer_newSoul
       objectReference: {fileID: 0}
+    - target: {fileID: 6930374421879991429, guid: 10876ffa4a26204498ceb57a6b099b90,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10876ffa4a26204498ceb57a6b099b90, type: 3}
 --- !u!1001 &1927253321
